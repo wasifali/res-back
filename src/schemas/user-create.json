@@ -1,0 +1,30 @@
+{
+  "type":"object",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://board.com/schemas/user-create",
+  "description": "Create a User",
+  "properties": {
+	"email": {
+	  "type": "string",
+	  "format": "email",
+	  "description" : "Email of the user"
+	},
+	"password": {
+	  "type": "string",
+	  "description": "Password should contain at least 8 characters",
+	  "minLength": 8
+	},
+	"userName": {
+	  "type": "string",
+	  "pattern":"^[a-zA-Z0-9@_.]*$",
+	  "description": "User name of user"
+	},
+	"type": {
+	  "type": "string",
+	  "description": "type of user"
+	}
+
+  },
+  "additionalProperties": true,
+  "required": ["userName"]
+}

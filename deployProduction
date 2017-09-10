@@ -1,0 +1,18 @@
+#!/bin/sh
+echo "************************************************"
+echo "***** Snappy Production Deployment Started *****"
+echo "************************************************"
+ssh ubuntu@52.39.84.117 <<EOF
+ cd snappy
+ git checkout master
+ git pull origin master
+ sudo npm install
+ bower install --allow-root
+ sudo su
+ forever stopall
+ forever start app.js --config restaurant-api.json
+ echo "***********************************************"
+ echo "***** Snappy Production Deployment Ended *****"
+ echo "***********************************************"
+ exit
+EOF

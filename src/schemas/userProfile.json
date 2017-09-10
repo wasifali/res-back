@@ -1,0 +1,44 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://board.com/schemas/userProfile-create",
+  "description": "Create user profile",
+  "properties": {
+    "firstName": {
+      "type": "string",
+      "pattern":"^[a-zA-Z]*$",
+
+      "description": "First Name of the photographer"
+    },
+    "lastName": {
+      "type": "string",
+      "pattern":"^[a-zA-Z]*$",
+      "description": "Last Name of the photographer"
+    },
+    "location": {
+      "type": "object",
+      "description": "location of photographer"
+    },
+      "thumbnail": {
+        "type": "string"
+      },
+    "gender": {
+      "type": "string",
+      "enum": [
+        "",
+        "Male",
+        "Female"
+      ],
+      "description": "gender of user"
+    },
+      "description": {
+        "type": "string",
+        "description": "description of user"
+      },
+      "number": {
+        "type": "string",
+        "description": "Number of photographer"
+      },
+    "additionalProperties": true
+  }
+}

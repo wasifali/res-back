@@ -1,0 +1,62 @@
+
+
+{
+    "aws": {
+        "accessKeyId": "",
+        "region": "us-west-2",
+        "secretAccessKey": ""
+    },
+    "db": {
+
+        "users": "mongodb://localhost:27017/restaurant?ssl=false",
+        "taskqueue": "mongodb://localhost:27017/taskqueue?ssl=false"
+
+    },
+    "server": {
+        "baseUrl": "http://localhost"
+    },
+    "logging": {
+        "transports": {
+            "console": {
+                "enabled": false,
+                "level": "info"
+            },
+            "file": {
+                "enabled": true,
+                "server": {
+                    "info": "/var/log/snappy/info.log",
+                    "debug": "/var/log/snappy/debug.log",
+                    "error": "/var/log/snappy/error.log"
+                }
+            }
+        },
+        "logPath": "/var/log/snappy",
+        "maxFiles": 100,
+        "maxSize": 1048576
+    },
+    "newrelic": {
+        "app_name": "user-data-api@dev",
+        "license_key": ""
+    },
+    "emailSender": {
+        "service": "Sendgrid",
+        "from":"do-not-reply@snappyapp.com",
+        "auth": {
+            "user": "snappy",
+            "key": "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"
+        }
+    },
+    "jwtSecret": "ljdhaisvubfdlkdndfdvfnifudvbfkdisvnofidsbiyxvasiudboin",
+    "facebookAuth": {
+        "clientID": "298625213810881",
+        "clientSecret": "1a5ac9fb6898e9bbe611c74d913718ca",
+       "callbackURL": "http://ec2-52-39-84-117.us-west-2.compute.amazonaws.com/auth/api/user/facebook/callback"
+    },
+    "googleAuth": {
+        "clientID": "429237602780-lbl2i1a5g401b0h2m6fhahoo0lk6of1u.apps.googleusercontent.com",
+        "clientSecret": "MpGMytBNxxZsJBCr21i8f-jl",
+        "callbackURL": "http://ec2-52-39-84-117.us-west-2.compute.amazonaws.com/auth/api/user/google/callback"
+    },
+    "allowedLoginAttempts": 5,
+    "loginAttemptsBlockingTime": 3600000
+}

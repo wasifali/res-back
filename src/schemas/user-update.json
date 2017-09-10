@@ -1,0 +1,41 @@
+{
+  "type":"object",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://board.com/schemas/user-update",
+  "description": "Update user",
+  "properties": {
+    "profile": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "object",
+          "properties": {
+            "first": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 50,
+              "description": "First Name of the user"
+            },
+            "middle": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 50,
+              "description": "Middle Name of the user"
+            },
+            "last": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 50,
+              "description": "Last Name of the user"
+            }
+          },
+          "required": ["first", "last"]
+        },
+        "additionalProperties": true,
+        "required": ["name"]
+      }
+    }
+  },
+  "additionalProperties": true,
+  "required": ["profile"]
+}

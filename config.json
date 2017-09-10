@@ -1,0 +1,48 @@
+{
+  "email": {
+    "from": {
+      "address": "do-not-reply@abc.com",
+      "name": "Do not reply"
+    },
+    "subjects": {
+      "confirm_account": "Confirm Account on board",
+      "password_reset": "Reset Password"
+    },
+    "templatePath": "/templates"
+  },
+  "server": {
+    "docsPath": "doc",
+    "limits": {
+      "maxBodySize": "10mb"
+    },
+    "ports": {
+      "public": 3005,
+      "private": 3005
+  },
+    "publicPath": "/public",
+    "routePrefix": "/api",
+    "staticPath": "/static",
+    "uploadPath": "/var/lib/uploads",
+    "workers": 1
+  },
+  "confirmUserUrl": "http://ec2-52-39-84-117.us-west-2.compute.amazonaws.com/user/confirm-signup/",
+  "confirmPhotographerUrl": "http://ec2-52-39-84-117.us-west-2.compute.amazonaws.com/photographer/confirm-signup/",
+  "resetPassword": "http://ec2-52-39-84-117.us-west-2.compute.amazonaws.com/api/reset-password/",
+  "armor":{
+    "partnerID":"161207119842",
+    "sellerFee":"10.00",
+    "buyerFee":"5.00"
+  },
+  "user": {
+    "password": {
+      "tokenExpiryInHours": 24
+    },
+    "picture": {
+      "format": "jpg",
+      "gravity": "Center",
+      "height": 140,
+      "quality": 1,
+      "width": 140
+    }
+  }
+}
